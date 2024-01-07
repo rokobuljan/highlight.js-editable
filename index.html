@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Highlight.js editor</title>
+  <link rel="shortcut icon" href="#!" type="image/x-icon">
+  <!-- 1. Libraries -->
+  <link href="/static/hljs/styles/atom-one-dark.min.css" rel="stylesheet">
+  <!-- 2. Custom styles and overrides -->
+  <link href="/static/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <h3>HTML</h3>
+
+  <div class="hilite">
+    <pre class="hilite-colors"><code class="language-html"></code></pre>
+    <div data-lang="html" class="hilite-editor" contenteditable="true" spellcheck="false" autocorrect="off"
+      autocapitalize="off">&lt;h1 class="heading" title="test this" data-some='foo bar'>This is a Heading&lt;/h1>
+&lt;p>This is a paragraph.&lt;/p></div>
+  </div>
+
+  <h3>CSS</h3>
+
+  <div class="hilite">
+    <pre class="hilite-colors"><code class="language-css"></code></pre>
+    <div data-lang="css" class="hilite-editor" contenteditable="true" spellcheck="false" autocorrect="off"
+      autocapitalize="off">p {
+  color: blue;
+}</div>
+  </div>
+
+  <h3>JS</h3>
+
+  <div class="hilite">
+    <pre class="hilite-colors"><code class="language-js"></code></pre>
+    <div data-lang="js" class="hilite-editor" contenteditable="true" spellcheck="false" autocorrect="off"
+      autocapitalize="off"></div>
+  </div>
+
+  <h3>PREVIEW</h3>
+
+  <iframe id="preview"></iframe>
+
+
+  <script type="module" src="/static/js/index.js"></script>
+
+</body>
+
+</html>

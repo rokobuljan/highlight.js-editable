@@ -1,0 +1,80 @@
+* {margin: 0; box-sizing: boder-box;}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+}
+
+body {
+  font: 14px/1.4 sans-serif;
+  background: hsl(220, 16%, 16%);
+  color: #fff;
+  padding: 16px;
+}
+
+.hilite {
+  position: relative;
+  background: #1e1e1e;
+  height: 120px;
+  overflow: auto;
+}
+
+.hilite-colors code,
+.hilite-editor {
+  padding: 1rem !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  white-space: pre-wrap;
+  font: 13px/1.4 monospace;
+  min-height: calc(100% - 2.4rem);
+  width: calc(100% - 2rem);
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+/* THE OVERLAYING CONTENTEDITABLE WITH TRANSPARENT TEXT */
+.hilite-editor {
+  display: inline-block;
+  position: relative;
+  color: transparent; /* Make text invisible */
+  caret-color: hsl( 50, 75%, 70%); /* But keep caret visible */
+}
+.hilite-editor:focus {
+  outline: transparent;
+}
+.hilite-editor::selection {
+  background: hsla( 0, 0%, 90%, 0.2);
+}
+
+/* THE UNDERLAYING DIV WITH HIGHLIGHT COLORS */
+.hilite-colors {
+  position: absolute;
+  user-select: none;
+}
+
+#preview {
+  display: block;
+  background: #fff;
+  width: 100%;
+  border: 0;
+}
+
+/* highlight.js customizations: */
+.hljs {
+  background: none;
+}
+
